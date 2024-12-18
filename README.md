@@ -6,7 +6,7 @@ Faster than the combination of [rollup-plugin-styles] and [rollup-plugin-import-
 
 ## Synopsis
 
-Custom element:
+Code:
 
 ```js
 import styles from './styles.css'
@@ -116,7 +116,7 @@ Let us have a stylesheet called `src/styles.css`:
 :host { display: block }
 ```
 
-And import it for a custom element in `src/index.js`:
+And import it in a script `src/index.js`:
 
 ```js
 import styles from './styles.css'
