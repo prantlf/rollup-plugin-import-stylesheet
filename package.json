@@ -1,0 +1,74 @@
+{
+  "name": "rollup-plugin-import-stylesheet",
+  "version": "1.0.0",
+  "description": "Rollup plugin for importing CSS sources as constructible stylesheets.",
+  "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/prantlf/rollup-plugin-import-stylesheet/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "http://github.com/prantlf/rollup-plugin-import-stylesheet/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/rollup-plugin-import-stylesheet.git"
+  },
+  "bugs": {
+    "url": "http://github.com/prantlf/rollup-plugin-import-stylesheet/issues"
+  },
+  "type": "module",
+  "module": "lib/index.js",
+  "main": "lib/index.cjs",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "rollup -c",
+    "lint": "biome lint *.js lib test",
+    "check": "teru test/index.cjs && teru-esm test/index.js",
+    "cover": "c8 teru-esm test/index.js",
+    "test": "biome lint *.js lib test && teru test/index.cjs && c8 teru-esm test/index.js"
+  },
+  "c8": {
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "branches": 100,
+    "lines": 100,
+    "functions": 100,
+    "statements": 100
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^5.1.4",
+    "postcss": "^8.4.49",
+    "rollup-copy-transform-css": "^2.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "rollup-plugin-import-stylesheet": "link:",
+    "builtin-modules": "^4.0.0",
+    "c8": "^10.1.3",
+    "rollup": "^4.28.1",
+    "tehanu": "^1.0.1",
+    "tehanu-repo-coco": "^1.0.1",
+    "tehanu-teru": "^1.0.1"
+  },
+  "peerDependencies": {
+    "rollup": "^2 || ^3 || ^4"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "rollup-plugin",
+    "css",
+    "import",
+    "css-modules"
+  ]
+}
